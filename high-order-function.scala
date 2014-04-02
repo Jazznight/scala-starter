@@ -14,5 +14,5 @@ object FileMatcher {
     filesMatching(_.contains(query))
 
   def filesRegex(query: String) =
-    filesMatching(_.matches(query))
+    filesMatching(fs => fs.matches(query))
 }
